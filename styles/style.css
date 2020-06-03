@@ -128,9 +128,7 @@ body{
 	background: #fff;
 	margin: 20px 0px 30px;
 	border: solid 1px #e6e6e6;
-	padding: 20px;
-	min-height: 140px;
-	max-height: 270px;
+	padding: 27px;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.1); 
 }
 #advantage{
@@ -274,6 +272,27 @@ body{
 }
 
 
+/*Details Page*/
+#content #productmain{
+	margin-bottom: 30px;
+}
+#content #productmain .price{
+	font-size: 30px;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 40px;
+}
+#content .mainimage{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+#content .thumb a{
+	display: block;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	border: solid 2px transparent;
+}
+#content .headline{
+	height: 350px;
+}
 
 /*footer*/
 #footer{
