@@ -92,13 +92,13 @@
 						<li>
 							<a href="index.php">Home</a>
 						</li>
-						<li class="active">
+						<li>
 							<a href="shop.php">Shop</a>
 						</li>
 						<li>
 							<a href="checkout.php">My Account</a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="cart.php">Shopping Cart</a>
 						</li>
 						<li>
@@ -163,124 +163,81 @@
 			<div class="col-md-12">
 				<ul class="breadcrumb">
 					<li><a href="index.php">Home</a></li>
-					<li>Shop</li>
+					<li>Cart</li>
 				</ul>
 			</div>
 
-			<div class="col-md-3">
-				<?php
-				include("includes/sidebar.php");
-				?>
-			</div>
+			<div class="col-md-9" id="cart">
+				<div class="box">
+					<form action="cart.php" method="post" enctype="multioart-form-data">
+						<h1>Shopping Cart</h1>
+						<p class="text-muted">Currently you have 3 item(s) in cart</p>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th colspan="2">Product</th>
+										<th>Quantity</th>
+	 									<th>Unit Price</th>	
+										<th>Size</th>
+										<th colspan="1">Delete</th>
+										<th colspan="1">Sub Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="admin_area/product_images/bg_1.jpg"></td>
+										<td>BENETTON White polo shirt</td>
+										<td>2</td>
+	 									<td>INR 299</td>	
+										<td>Large</td>
+										<td><input type="checkbox" name="remove[]"></td>
+										<td>INR 999</td>
+									</tr>
+									<tr>
+										<td><img src="admin_area/product_images/bg_1.jpg"></td>
+										<td>BENETTON White polo shirt</td>
+										<td>2</td>
+	 									<td>INR 299</td>	
+										<td>Large</td>
+										<td><input type="checkbox" name="remove[]"></td>
+										<td>INR 999</td>
+									</tr>
+									<tr>
+										<td><img src="admin_area/product_images/bg_1.jpg"></td>
+										<td>BENETTON White polo shirt</td>
+										<td>2</td>
+	 									<td>INR 299</td>	
+										<td>Large</td>
+										<td><input type="checkbox" name="remove[]"></td>
+										<td>INR 999</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th colspan="5">Total</th>
+										<th colspan="2">INR 1999</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
 
-			<div class="col-md-9">
-				<div class="row" id="productmain">
-					<div class="col-sm-6">
-						<div id="mainimage">
-							<div id="myCarousel" class="carousel slide" data-ride="caraousel">
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-									<center>
-										<img src="admin_area/product_images/bg_1.jpg" class="img-responsive">
-									</center>
-									</div>
-									<div class="item">
-										<center>
-											<img src="admin_area/product_images/bg_2.jpg" class="img-responsive">
-										</center>
-									</div>
-									<div class="item">
-										<center>
-											<img src="admin_area/product_images/image_5.jpg" class="img-responsive">
-										</center>
-									</div>
-								</div>
-
-								<a href="#myCarousel" class="left carousel-control" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
+						<div class="box-footer">
+							<div class="pull-left">
+								<a href="index.php" class="btn btn-default">
+									<i class="fa fa-chevron-left"></i> Continue Shopping
 								</a>
-								<a href="#myCarousel" class="right carousel-control" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
+							</div>
+							<div class="pull-right">
+								<button class="btn btn-default" type="submit" name="update" value="update cart">
+									<i class="fa fa-refresh"></i> Update Cart
+								</button>
+								<a href="checkout.php" class="btn btn-primary">
+									Proceed To Checkout <i class="fa fa-chevron-right"></i>
 								</a>
 							</div>
 						</div>
-					</div>
-
-					<div class="col-sm-6">
-						<div class="box">
-							<h1 class="text-center">BENETTON White polo shirt</h1>
-							<form action="details.php" method="post" class="form-horizontal">
-								<div class="form-group">
-									<label class="col-md-6 control-label">Product Quantity</label>
-									<div class="col-md-7">
-										<select name="product_qty" class="form-control">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-md-6 control-label">Product Size</label>
-									<div class="col-md-7">
-										<select name="product_size" class="form-control">
-											<option>Select a Size</option>
-											<option>Small        </option>
-											<option>Medium       </option>
-											<option>Large        </option>
-											<option>Extra Large   </option>
-										</select>
-									</div>
-								</div>
-
-								<p class="price">INR 200</p>
-								<p class="text-center buttons">
-									<button class="btn btn-primary" type="submit">
-										<i class="fa fa-shopping-cart"></i> Add To Cart
-									</button>
-								</p>
-							</form>
-						</div>
-						<div class="col-xs-4">
-							<a class="thumb" href="">
-								<img src="admin_area/product_images/bg_1.jpg" class="img-responsive">
-							</a>
-						</div>
-
-						<div class="col-xs-4">
-							<a class="thumb" href="">
-								<img src="admin_area/product_images/bg_2.jpg" class="img-responsive">
-							</a>
-						</div>
-
-						<div class="col-xs-4">
-							<a class="thumb" href="">
-								<img src="admin_area/product_images/image_5.jpg" class="img-responsive">
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="box" id="details">
-					<h4>Product Details</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-					<h4>Size</h4>
-					<ul>
-						<li>Small        </li>			
-						<li>Medium       </li>
-						<li>Large        </li>
-						<li>Extra Large  </li>
-					</ul>
+					</form>
 				</div>
 
 				<div id="row same-height-row">
@@ -326,16 +283,49 @@
 						</div>
 					</div>
 				</div>
+
+
 			</div>
 
-
+			<div class="col-md-3">
+				<div class="box" id="order-summary">
+					<div class="box-header">
+						<h3>Order Summary</h3>
+					</div>
+					<p class="text-muted">
+						Shipping and Additional Costs are calculated based on the value you have entered
+					</p>
+					<div class="table-responsive">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>Order Subtotal</td>
+									<th>INR 1999</th>
+								</tr>
+								<tr>
+									<td>Shipping & Handling</td>
+									<td>INR 0</td>
+								</tr>
+								<tr>
+									<td>Tax</td>
+									<td>INR 0</td>
+								</tr>
+								<tr class="total">
+									<td>Total</td>
+									<th>INR 1999</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<!-- footer -->
 	<?php
 	include("includes/footer.php");
-	?>	
+	?>
 
 </body>
 </html>

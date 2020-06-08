@@ -90,7 +90,7 @@
 					<ul class="nav navbar-nav left ">
 						
 						<li class="active">
-							<a href="home.php">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li>
 							<a href="shop.php">Shop</a>
