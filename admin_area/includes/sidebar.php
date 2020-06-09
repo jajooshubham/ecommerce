@@ -11,7 +11,7 @@
 	</div>
 	<ul class="nav navbar-right top-nav"><!--nav navbar-right top-nav Starts-->
 		<li class="dropdown">
-			<a href-"#" class="dropdown-toggle" data-toggle="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				<i class="fa fa-user"></i> Abhishek Shrimal
 			</a>
 			<ul class ="dropdown-menu">
