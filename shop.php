@@ -34,10 +34,10 @@
 				<ul class="menu"><!-- top menu begin -->
 					
 					<li>
-						<a href="customer_register.php">Register</a>
+						<a href="customer_registration.php">Register</a>
 					</li>
 					<li>
-						<a href="checkout.php">My Account</a>
+						<a href="customer/my_account.php">My Account</a>
 					</li>
 					<li>
 						<a href="cart.php">Go To Cart</a>
@@ -96,16 +96,16 @@
 							<a href="shop.php">Shop</a>
 						</li>
 						<li>
-							<a href="checkout.php">My Account</a>
+							<a href="customer/my_account.php">My Account</a>
 						</li>
 						<li>
 							<a href="cart.php">Shopping Cart</a>
 						</li>
 						<li>
-							<a href="cart.php">About Us</a>
+							<a href="#">About Us</a>
 						</li>
 						<li>
-							<a href="cart.php">Services</a>
+							<a href="#">Services</a>
 						</li>
 						<li>
 							<a href="contact.php">Contact Us</a>

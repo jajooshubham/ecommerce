@@ -34,16 +34,16 @@
 				<ul class="menu"><!-- top menu begin -->
 					
 					<li>
-						<a href="customer_registration.php">Register</a>
+						<a href="../customer_registration.php">Register</a>
 					</li>
 					<li>
-						<a href="customer/my_account.php">My Account</a>
+						<a href="../my_account.php">My Account</a>
 					</li>
 					<li>
-						<a href="cart.php">Go To Cart</a>
+						<a href="../cart.php">Go To Cart</a>
 					</li>
 					<li>
-						<a href="checkout.php">Login</a>
+						<a href="../checkout.php">Login</a>
 					</li>
 
 				</ul><!-- top menu end -->
@@ -90,25 +90,25 @@
 					<ul class="nav navbar-nav left ">
 						
 						<li>
-							<a href="index.php">Home</a>
+							<a href="../index.php">Home</a>
 						</li>
 						<li>
-							<a href="shop.php">Shop</a>
-						</li>
-						<li>
-							<a href="customer/my_account.php">My Account</a>
-						</li>
-						<li>
-							<a href="cart.php">Shopping Cart</a>
-						</li>
-						<li>
-							<a href="#">About Us</a>
-						</li>
-						<li>
-							<a href="#">Services</a>
+							<a href="../shop.php">Shop</a>
 						</li>
 						<li class="active">
-							<a href="contact.php">Contact Us</a>
+							<a href="my_account.php">My Account</a>
+						</li>
+						<li>
+							<a href="../cart.php">Shopping Cart</a>
+						</li>
+						<li>
+							<a href="../cart.php">About Us</a>
+						</li>
+						<li>
+							<a href="../cart.php">Services</a>
+						</li>
+						<li>
+							<a href="../contact.php">Contact Us</a>
 						</li>
 
 					</ul>
@@ -163,7 +163,7 @@
 			<div class="col-md-12">
 				<ul class="breadcrumb">
 					<li><a href="index.php">Home</a></li>
-					<li>Contact</li>
+					<li>My Account</li>
 				</ul>
 			</div>
 
@@ -175,44 +175,52 @@
 
 			<div class="col-md-9">
 				<div class="box">
-					<div class="box-header">
-						<center>
-							<h2>Message To Us Now</h2>
-							<p class="text-muted">If you have any questions, please feel free to message us, Our Customer service is working for you 24/7</p>
-						</center>
-					</div>
-					<form action="contact.php" method="post">
+					<h1 align="center">Please Confirm Your Payment</h1>
+					<form action="confirm.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
-							<label>Name</label>
-							<input type="text" name="Name" required="" class="form-control">
+							<label>Invoice Number</label>
+							<input type="text" name="invoice_number" required="" class="form-control">
 						</div>
+
 						<div class="form-group">
-							<label>E-mail</label>
-							<input type="text" name="email" required="" class="form-control">
+							<label>Amount</label>
+							<input type="text" name="amount" required="" class="form-control">
 						</div>
+
 						<div class="form-group">
-							<label>Subject</label>
-							<input type="text" name="submit" required="" class="form-control">
+							<label>Select Payment Mode</label>
+							<select class="form-control" name="payment_mode">
+								<option>Net Banking</option>
+								<option>UPI</option>
+								<option>Cash On Delivery</option>
+								<option>Debit Card/Credit Card</option>
+							</select>
 						</div>
+
 						<div class="form-group">
-							<label>Message</label>
-							<textarea class="form-control" name="message"></textarea>
+							<label>Payment Date</label>
+							<input type="date" name="date" required="" class="form-control">
 						</div>
+
+						<div class="form-group">
+							<label>Transaction Number</label>
+							<input type="text" name="trfr_number" required="" class="form-control">
+						</div>
+
 						<div class="text-center">
-							<button class="btn btn-primary" type="submit" name="submit">
-								<i class="fa fa--user-md"></i> Send Message
-							</button>
+							<button class="btn btn-primary btn-lg" type="submit" name="confirm_payment">Confirm Payment</button>
 						</div>
 					</form>
 				</div>
-			</div>	
+			</div>
+
 		</div>
 	</div>
 
 	<!-- footer -->
 	<?php
 	include("includes/footer.php");
-	?>	
+	?>
 
 </body>
 </html>
