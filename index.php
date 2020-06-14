@@ -1,3 +1,6 @@
+<?php
+	include("includes/db.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -175,18 +178,31 @@
 
 				<div class="carousel-inner">
 					
-					<div class="item active">
-						<img src="admin_area/slider_images/1.jpg">
-					</div>
-					<div class="item">
-						<img src="admin_area/slider_images/2.jpg">
-					</div>
-					<div class="item">
-						<img src="admin_area/slider_images/3.jpg">
-					</div>
-					<div class="item">
-						<img src="admin_area/slider_images/4.jpg">
-					</div>
+					<?php
+						$get_slider="SELECT * FROM slider LIMIT 0,1";
+						$run_slider=mysqli_query($con,$get_slider);
+						while($row=mysqli_fetch_array($run_slider)){
+							$slider_name=$row['slider_name'];
+							$slider_image=$row['slider_image'];
+							echo "<div class = 'item-active'>
+								<img src='admin_area/slider_images/$slider_image'>
+							</div>";
+						}
+					?>
+					
+					<?php
+						$get_slider="SELECT * FROM slider LIMIT 1,3";
+						$run_slider=mysqli_query($con,$get_slider);
+						while($row=mysqli_fetch_array($run_slider)){
+							$slider_name=$row['slider_name'];
+							$slider_image=$row['slider_image'];
+							echo "
+									<div class='item'>
+										<img src=='admin_area/slider_image/$slider_image'>
+									</div>
+							";
+						}
+					?>
 
 				</div>
 
