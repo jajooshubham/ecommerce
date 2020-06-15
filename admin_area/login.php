@@ -9,8 +9,19 @@ include ("includes/db.php");
 <head>
 	
 	<title>Admin Login</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/login.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/npm.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -32,7 +43,7 @@ Log In
 
 <h4 class="forget-password">
 
-<a href=forget_password.php"> Lost Your Password? Forget Password</a>
+<a href="forget_password.php"> Lost Your Password? Forget Password</a>
 
 </h4>
 

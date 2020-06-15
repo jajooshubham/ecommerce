@@ -56,43 +56,44 @@ $count_order=mysqli_num_rows($run_order);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/npm.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-	
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-
-
-
-
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 
 <body>
 
 	<div id="wrapper">
-		<?php  include 'includes/sidebar.php'; ?>
+		<div class="col-lg-2">
+		<?php  include( 'includes/sidebar.php'); ?>
+		</div>
+		<div class="col-lg-10">
 		<div id="page-wrapper">
 			<div class="container-fluid">
 
 				<?php
 				if(isset($_GET['dashboard']))
 				{
-					include 'dashboard.php';
+					include ('dashboard.php');
 				}
 				?>
 			</div>
+		</div>
 		</div>
 	</div>	
 
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!-- footer -->
+
 	<?php
 	include("includes/footer.php");
 	?>

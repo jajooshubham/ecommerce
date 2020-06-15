@@ -264,7 +264,7 @@ else{
 <<?php 
 $i=0;
 $get_order="select * from customer_order order by 1 DESC LIMIT 0,5";
-$run_order=mysqli_query($con,$get_order)
+$run_order=mysqli_query($con,$get_order);
 
 while ($row_order=mysqli_fetch_array($run_order)){
 	$order_id=$row_order['order_id'];
