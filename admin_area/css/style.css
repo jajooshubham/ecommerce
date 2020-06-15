@@ -128,9 +128,7 @@ body{
 	background: #fff;
 	margin: 20px 0px 30px;
 	border: solid 1px #e6e6e6;
-	padding: 20px;
-	min-height: 140px;
-	max-height: 270px;
+	padding: 27px;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.1); 
 }
 #advantage{
@@ -274,6 +272,74 @@ body{
 }
 
 
+/*Details Page*/
+#content #productmain{
+	margin-bottom: 30px;
+}
+#content #productmain .price{
+	font-size: 30px;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 40px;
+}
+#content .mainimage{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+#content .thumb a{
+	display: block;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	border: solid 2px transparent;
+}
+#content .headline{
+	height: 350px;
+}
+
+/*cart page*/
+#content #cart .table tbody tr td img{
+	width: 50px;
+} 
+#content #cart .table tbody tr td input{
+	width: 40px;
+	text-align: right;
+}
+#content #cart .table tbody tr td{
+	vertical-align: middle;
+}
+#content #cart .table tfoot{
+	font-size: 18px;
+}
+.box .box-footer{
+	background: #f7f7f7;
+	margin: 30px -20px -20px;
+	padding: 20px;
+	border-top: solid 1px #eeeeee;
+}
+.box .box-footer:before,
+.box .box-footer:after{
+	content: " ";
+	display: table;
+}
+.box .box-footer:after{
+	clear: both;
+}
+.box .box-footer{
+	background: #f7f7f7;
+	margin: -20px -20px 20px;
+	padding: 20px;
+	border-bottom: solid 1px #eeeeee;
+}
+#content #order-summary table{
+	margin-top: 20px;
+}
+#content #order-summary table td{
+	color: #999999;
+}
+#content #order-summary table tr.total td,
+#content #order-summary table tr.total th{
+	font-size: 18px;
+	color: #555555;
+	font-weight: 300;
+}
 
 /*footer*/
 #footer{
