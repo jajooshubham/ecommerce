@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 include ("includes/db.php");
 ?>
 
@@ -9,18 +9,7 @@ include ("includes/db.php");
 <head>
 	
 	<title>Admin Login</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/npm.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
@@ -59,20 +48,20 @@ Log In
 <?php
 if(isset($_POST['admin_login']))
 {
-	$admin_email=mysql_real_escape_string($con, $_POST['admin_email']);
-	$admin_pass=mysql_real_escape_string($con, $_POST['admin_pass']);
+	$admin_email=mysqli_real_escape_string($con, $_POST['admin_email']);
+	$admin_pass=mysqli_real_escape_string($con, $_POST['admin_pass']);
 	$get_admin="select * from admins where admin_email='$admin_email' AND admin_pass='$admin_pass'";
 	$run_admin=mysqli_query($con,$get_admin);
-	$count=mysqli_num_row($run_admin);
+	$count=mysqli_num_rows($run_admin);
 	if($count==1)
 	{
-		$_SESSION['admin_email']=$_admin_email;
+		$_SESSION['admin_email']=$admin_email;
 		echo "<script>alert('You are logged in')</script>";
 		echo "<script>window.open('index.php?dashboard','_self')</script>";
 	}
 	else
 	{
-		echo "<script>alert('Email / Password Wrong')</script>";"
+		echo "<script>alert('Email / Password Wrong')</script>";
 	}
 }
 ?>
