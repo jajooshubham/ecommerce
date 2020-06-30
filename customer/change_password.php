@@ -1,3 +1,21 @@
+
+	<div id="content">
+		<div class="container">
+			<div class="col-md-12">
+				<ul class="breadcrumb">
+					<li><a href="index.php?home">Home</a></li>
+					<li><a href="index.php?customer/my_account">My Account</a></li>
+					<li>Change Password</li>
+				</ul>
+			</div>
+
+			<div class="col-md-3">
+				<?php
+				include("includes/sidebar.php");
+				?>
+			</div>
+
+<div class="col-md-9">
 <div class="box">
 	<center>
 		<h1>Change Your Password</h1>
@@ -23,4 +41,5 @@
 			</button>
 		</div>
 	</form>
+</div>
 </div>

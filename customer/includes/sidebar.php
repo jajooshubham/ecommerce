@@ -9,27 +9,27 @@
 	<div class="panel-body">
 		<ul class="nav nav-pills nav-stacked category-menu">
 			<li class="<?php if(isset($_GET[my_order])){echo "active";}?>">
-				<a href="my_account.php?my_order">
+				<a href="index.php?customer/my_account/my_order">
 					<i class="fa fa-list"></i> My orders
 				</a>
 			</li>
 			<li class="<?php if(isset($_GET[pay_offline])){echo "active";}?>">
-				<a href="my_account.php?pay_offline">
+				<a href="index.php?customer/my_account/pay_offline">
 					<i class="fa fa-bolt"></i> Pay Offline
 				</a>
 			</li>
 			<li class="<?php if(isset($_GET[my_address])){echo "active";}?>">
-				<a href="my_account.php?my_address">
+				<a href="index.php?customer/my_account/my_address">
 					<i class="fa fa-user"></i> My Address
 				</a>
 			</li>
 			<li class="<?php if(isset($_GET[edit_account])){echo "active";}?>">
-				<a href="my_account.php?edit_account">
+				<a href="index.php?customer/my_account/edit_account">
 					<i class="fa fa-pencil"></i> Edit Account
 				</a>
 			</li>
 			<li class="<?php if(isset($_GET[change_password])){echo "active";}?>">
-				<a href="my_account.php?change_password">
+				<a href="index.php?customer/my_account/change_password">
 					<i class="fa fa-user"></i> Change Password
 				</a>
 			</li>
@@ -39,12 +39,12 @@
 				</a>
 			</li>-->
 			<li class="<?php if(isset($_GET[delete_account])){echo "active";}?>">
-				<a href="my_account.php?delete_account">
+				<a href="index.php?customer/my_account/delete_account">
 					<i class="fa fa-trace-o"></i> Delete Account
 				</a>
 			</li>
 			<li class="<?php if(isset($_GET[logout])){echo "active";}?>">
-				<a href="my_account.php?logout">
+				<a href="index.php?customer/my_account/logout">
 					<i class="fa fa-sign-out"></i> Logout
 				</a>
 			</li>
